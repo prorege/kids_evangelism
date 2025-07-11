@@ -1,11 +1,113 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="kr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover, user-scalable=yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" type="image/x-icon" href="img2/logo.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- 링크복사, 위로가기 토글 아이콘 -->
+    <link rel="stylesheet" type="text/css" href="./src/framework.css" />
+    <!-- 로딩 -->
+    <link rel="stylesheet" type="text/css" href="./src/style.css" />
+    <!-- 전체형태 -->
+    <link rel="stylesheet" type="text/css" href="./src/slider.css" />
+    <link rel="stylesheet" href="./src/fade.css" />
+
+    <!-- 폰트어썸 -->
+    <script type="text/javascript" src="./src/jquery.js"></script>
+    <script type="text/javascript" src="./src/plugins.js"></script>
+    <script type="text/javascript" src="./src/underscore.js"></script>
+    <script type="text/javascript" src="./src/modernizr.custom.63321.js"></script>
+    <script type="text/javascript" src="./src/custom.js"></script>
+    <script charset="UTF-8" src="./src/kakao.js"></script>
+    <script src="https://t1.kakaocdn.net/kakao_js_sdk/${VERSION}/kakao.min.js" integrity="${INTEGRITY_VALUE}" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./src/fade.js"></script>
+    <script>
+        setTimeout(function () {
+            location.reload();
+        }, 900000); // 900000밀리초 = 900초후 페이지 새로고침
+    </script>
+
+    <meta property="og:image" content="img2/metaimg.png" />
+    <title>새생명 초청 주일</title>
+    <meta property="og:url" content="https://newcomer-june.netlify.app/" />
+    <meta property="og:title" content="안디옥교회 새생명 초청 주일" />
+    <meta property="og:description" content="안디옥교회 6/29(일)" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="theme-color" content="#000000" />
 </head>
-<body>
-    <h1>어린이 전도 모바일 초돼장</h1>
+
+<body class="is-not-ios" onload="showImage()">
+    <!-- 로딩 이미지 -->
+    <div id="preloader" class="preloader-light">
+        <div id="preload-spinner"></div>
+        <h1></h1>
+        <p>잠시만 기다려주세요</p>
+    </div>
+
+    <!-- body start -->
+    <div id="page-transitions" style="min-height: 592px">
+        <div class="page-content" style="transition: all 300ms ease 0s">
+            <div class="main-img" id="thisone">
+                <img id="background letter" src="img2/background.png" alt="background" />
+            </div>
+            <div>
+                <img class="first-part mt-35" src="img2/1.png" alt="" />
+            </div>
+            <div>
+                <img class="first-part" src="img2/2.png" alt="" />
+            </div>
+            <div>
+                <img class="first-part reveal" src="img2/3.png" alt="" />
+            </div>
+            <div>
+                <img class="first-part reveal" src="img2/4.png" alt="" />
+            </div>
+            <div>
+                <img class="first-part reveal" src="img2/5.png" alt="" />
+            </div>
+            <div>
+                <img class="first-part reveal" src="img2/6.png" alt="" />
+            </div>
+            <div>
+                <img class="first-part reveal" src="img2/7.png" alt="" />
+            </div>
+            <div>
+                <img class="first-part reveal" src="img2/8.png" alt="" />
+            </div>
+            <div>
+                <img class="first-part reveal" src="img2/9.png" alt="" />
+            </div>
+            <div>
+                <img class="first-part reveal" src="img2/10.png" alt="" />
+            </div>
+
+
+            <div id="information" class="footer-socials" style="padding-top: 50px">
+                <a href="https://www.youtube.com/@hewilldoit" target="_blank" class="shadow-small icon icon-round no-border icon-xs">
+                    <img src="img2\youtube-logo.png" class="sns-logo" />
+                </a>
+                <a href="https://soundcloud.com/wzpjxy1a1xfk" target="_blank" class="shadow-small icon icon-round no-border icon-xs">
+                    <img src="img2\logo_soundcloud.jpg" class="sns-logo" />
+                </a>
+                <a href="https://www.instagram.com/antioch1k?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="shadow-small icon icon-round no-border icon-xs">
+                    <img src="./img2/insta.png" class="sns-logo" />
+                </a>
+            </div>
+
+            <div id="information2" style="width: 70%; margin-top: 30px">
+                <p class="copyText">
+                    ©&nbsp;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script>
+                    Antioch, all rights reserved
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
