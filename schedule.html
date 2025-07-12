@@ -76,6 +76,7 @@
     }
   </style>
 </head>
+<!-- 생략된 head 부분은 동일 -->
 
 <body>
   <div class="main-img">
@@ -83,27 +84,34 @@
   </div>
 
   <div class="circle-container">
-    <div class="circle-button" onclick="showImage('구평진평.png')">구평진평</div>
-    <div class="circle-button" onclick="showImage('도량원호.png')">도량원호</div>
-    <div class="circle-button" onclick="showImage('봉곡.png')">봉곡</div>
-    <div class="circle-button" onclick="showImage('북삼.png')">북삼</div>
-    <div class="circle-button" onclick="showImage('상모사곡입은.png')">상모사곡입은</div>
-    <div class="circle-button" onclick="showImage('석적.png')">석적</div>
-    <div class="circle-button" onclick="showImage('신평비산.png')">신평비산</div>
-    <div class="circle-button" onclick="showImage('오태.png')">오태</div>
-    <div class="circle-button" onclick="showImage('옥계산동.png')">옥계산동</div>
-    <div class="circle-button" onclick="showImage('형곡.png')">형곡</div>
+    <div class="circle-button" onclick="handleClick('구평진평.png')">구평진평</div>
+    <div class="circle-button" onclick="handleClick('도량원호.png')">도량원호</div>
+    <div class="circle-button" onclick="handleClick('봉곡.png')">봉곡</div>
+    <div class="circle-button" onclick="handleClick('북삼.png')">북삼</div>
+    <div class="circle-button" onclick="handleClick('상모사곡입은.png')">상모사곡입은</div>
+    <div class="circle-button" onclick="handleClick('석적.png')">석적</div>
+    <div class="circle-button" onclick="handleClick('신평비산.png')">신평비산</div>
+    <div class="circle-button" onclick="handleClick('오태.png')">오태</div>
+    <div class="circle-button" onclick="handleClick('옥계산동.png')">옥계산동</div>
+    <div class="circle-button" onclick="handleClick('형곡.png')">형곡</div>
   </div>
 
-  <div class="preview-image">
+  <!-- ⬇️ ID 부여로 스크롤 이동 대상 지정 -->
+  <div id="schedule" class="preview-image">
     <img id="selectedImage" src="img/background.png" alt="선택된 지역 이미지" />
   </div>
 
   <script>
-    function showImage(imageName) {
+    function handleClick(imageName) {
+      // 이미지 변경
       const imgElement = document.getElementById('selectedImage');
       imgElement.src = 'img/' + imageName;
+
+      // 일정 영역으로 부드럽게 스크롤
+      const scheduleSection = document.getElementById('schedule');
+      scheduleSection.scrollIntoView({ behavior: 'smooth' });
     }
   </script>
 </body>
+
 </html>
